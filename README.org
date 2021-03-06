@@ -1,0 +1,4 @@
+#+TITLE: README
+#+AUTHOR: Richard Thames
+
+This is the README for ~richardthames/textcompression.com~ — the source code for [[https://textcompression.com][textcompression.com]].

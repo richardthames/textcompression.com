@@ -1,0 +1,12 @@
+# MacOS
+.DS_Store
+
+# Emacs
+*~
+*#
+
+# Node
+node_modules/
+
+# 11ty
+_site
