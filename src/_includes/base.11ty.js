@@ -5,7 +5,7 @@ exports.render = function ({
   content,
   page: { url },
 }) {
-  const pageTitle = (url === '/' ? '' : `${title} | `) + pkg.name
+  const pageTitle = (url === '/' ? '' : `${title} | `) + 'Text Compression'
   const pageDescription = description ? description : pkg.description
 
   return `<!DOCTYPE html>
