@@ -41,8 +41,8 @@ exports.render = function ({
             height: 100%;
           }
           body {
-            background: #14191e;
-            color: #f2f2f2;
+            background: #f2f2f2;
+            color: #14191e;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -52,6 +52,12 @@ exports.render = function ({
               'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
               'Segoe UI Symbol', 'Noto Color Emoji';
             text-align: center;
+          }
+          @media (prefers-color-scheme: dark) {
+            body {
+              background: #14191e;
+              color: #f2f2f2;
+            }
           }
           p {
             font-size: 1em;
