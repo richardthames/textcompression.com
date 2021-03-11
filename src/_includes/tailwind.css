@@ -1,0 +1,13 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer components {
+  h1 {
+    @apply text-4xl sm:text-6xl text-center my-3 sm:my-6;
+  }
+
+  h2 em {
+    @apply text-lg sm:text-2xl text-center block w-full font-extralight;
+  }
+}

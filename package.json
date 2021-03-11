@@ -1,18 +1,30 @@
 {
   "name": "textcompression.com",
-  "description": "A website all about text compression",
+  "description": "A website about text compression",
   "url": "https://textcompression.com",
   "author": "Richard Thames",
   "version": "0.0.1",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "npm run clean && npx @11ty/eleventy",
+    "build": "npm-run-all clean --parallel build:* --print-label",
+    "build:eleventy": "ELEVENTY_ENV=production eleventy",
+    "build:postcss": "NODE_ENV=production postcss src/_includes/tailwind.css -o _site/styles.css",
     "clean": "rm -rf _site",
-    "start": "npx @11ty/eleventy --serve"
+    "dev": "npm-run-all clean --parallel dev:* --print-label",
+    "dev:eleventy": "eleventy --serve",
+    "dev:postcss": "postcss src/_includes/tailwind.css -o _site/styles.css --watch",
+    "serve": "npx serve _site -l 8080"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
-    "html-minifier": "^4.0.0"
+    "autoprefixer": "^10.2.5",
+    "html-minifier": "^4.0.0",
+    "install": "^0.13.0",
+    "npm": "^7.6.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.8",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.3"
   },
   "repository": {
     "type": "git",

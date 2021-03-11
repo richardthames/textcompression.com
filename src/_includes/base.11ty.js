@@ -31,55 +31,12 @@ exports.render = function ({
         />
         <link rel="icon" href="/favicon.svg" />
         <link rel="manifest" href="/site.webmanifest" />
-        <style>
-          * {
-            border: 0;
-            margin: 0;
-            padding: 0;
-          }
-          html {
-            height: 100%;
-          }
-          body {
-            background: #f2f2f2;
-            color: #14191e;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            font-family: ui-sans-serif, system-ui, -apple-system,
-              BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-              'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-              'Segoe UI Symbol', 'Noto Color Emoji';
-            text-align: center;
-          }
-          @media (prefers-color-scheme: dark) {
-            body {
-              background: #14191e;
-              color: #f2f2f2;
-            }
-          }
-          p {
-            font-size: 1em;
-            font-weight: lighter;
-          }
-          h1 {
-            font-size: 2em;
-            font-weight: normal;
-            padding: 12px;
-          }
-          @media (min-width: 640px) {
-            p {
-              font-size: 2em;
-            }
-            h1 {
-              font-size: 4em;
-            }
-          }
-        </style>
+        <link rel="stylesheet" href="/styles.css" />
       </head>
-      <body>
-        <div>${content}</div>
+      <body
+        class="bg-white text-black dark:bg-black dark:text-white px-2 font-serif text-lg min-h-screen flex flex-col justify-center"
+      >
+        <main class="max-w-prose mx-auto">${content}</main>
       </body>
     </html>`
 }
