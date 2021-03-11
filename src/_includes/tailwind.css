@@ -8,6 +8,6 @@
   }
 
   h2 em {
-    @apply text-lg sm:text-2xl text-center block w-full font-extralight;
+    @apply text-lg sm:text-2xl text-center block w-full font-extralight my-3;
   }
 }
